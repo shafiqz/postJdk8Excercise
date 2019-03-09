@@ -1,4 +1,4 @@
-package sorter.api;
+package com.saz.sorter.api;
 
 public interface Sorter {
 

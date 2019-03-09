@@ -1,6 +1,6 @@
 package com.saz.sorter.selection;
 
-import sorter.api.Sorter;
+import com.saz.sorter.api.Sorter;
 
 import java.util.Arrays;
 
