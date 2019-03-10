@@ -1,12 +1,12 @@
-package com.saz.sorter.selection;
+package com.saz.sorter.bubble;
 
 import com.saz.sorter.api.Sorter;
-import com.saz.sorter.bubble.BubbleSorter;
 
 import java.util.concurrent.ThreadLocalRandom;
-import static org.junit.jupiter.api.Assertions.*;
 
-class BubbleSorterTest {
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class InsertionSorterTest {
 
     private ThreadLocalRandom random = ThreadLocalRandom.current();
     int arraySize = 100;
@@ -18,12 +18,12 @@ class BubbleSorterTest {
     @org.junit.jupiter.api.Test
     void sort() {
 
-        Integer[] array = new Integer[100];
+        Integer[] array = new Integer[arraySize];
         for (int i = 0; i <= array.length - 1; ++i) {
             array[i] = random.nextInt();
         }
 
-        Sorter sorter = new BubbleSorter();
+        Sorter sorter = new InsertionSorter();
         Integer[] sorted = sorter.sort(array);
 
         for (int i = 1; i <= sorted.length - 1; ++i) {
