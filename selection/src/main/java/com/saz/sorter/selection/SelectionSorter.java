@@ -16,7 +16,7 @@ public class SelectionSorter implements Sorter {
             int idxOfSmallest = i;
             for (int j = i; j < sorted.length; ++j) {
 
-                if (sorted[idxOfSmallest].compareTo(sorted[j]) < 0) {
+                if (sorted[idxOfSmallest].compareTo(sorted[j]) > 0) {
                       idxOfSmallest = j;
                 }
             }
