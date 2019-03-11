@@ -1,10 +1,10 @@
-package com.saz.sorter.selection;
+package com.saz.sorter.bubble;
 
 import com.saz.sorter.api.Sorter;
-import com.saz.sorter.bubble.BubbleSorter;
 
 import java.util.concurrent.ThreadLocalRandom;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class BubbleSorterTest {
 
