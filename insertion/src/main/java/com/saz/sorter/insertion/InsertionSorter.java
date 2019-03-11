@@ -1,4 +1,4 @@
-package com.saz.sorter.bubble;
+package com.saz.sorter.insertion;
 
 import com.saz.sorter.api.Sorter;
 
