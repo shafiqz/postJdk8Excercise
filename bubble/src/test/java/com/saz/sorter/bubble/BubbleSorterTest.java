@@ -18,7 +18,7 @@ class BubbleSorterTest {
     @org.junit.jupiter.api.Test
     void sort() {
 
-        Integer[] array = new Integer[100];
+        Integer[] array = new Integer[arraySize];
         for (int i = 0; i <= array.length - 1; ++i) {
             array[i] = random.nextInt();
         }
