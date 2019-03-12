@@ -11,7 +11,7 @@
 	</parent>
 	
 	<artifactId>jfx-sorter-api</artifactId>
-	<version>${parent.version}</version>
+	<version>${project.parent.version}</version>
     <packaging>jar</packaging>
 
 </project>

@@ -11,14 +11,14 @@
 	</parent>
 	
 	<artifactId>jfx-sorter-bubble</artifactId>
-	<version>${parent.version}</version>
+	<version>${project.parent.version}</version>
     <packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.saz</groupId>
 			<artifactId>jfx-sorter-api</artifactId>
-			<version>${parent.version}</version>
+			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
