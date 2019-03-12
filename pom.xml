@@ -24,6 +24,10 @@
     <modules>
         <module>api</module>
         <module>selection</module>
+        <module>bubble</module>
+        <module>insertion</module>
+        <module>heap</module>
+        <module>quick</module>
     </modules>
     <build>
 
