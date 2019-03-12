@@ -11,6 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javafx.version>11.0.2</javafx.version>
     </properties>
 
     <dependencyManagement>
@@ -20,6 +21,16 @@
                 <artifactId>junit-jupiter-engine</artifactId>
                 <version>5.4.0</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
+                <version>${javafx.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-fxml</artifactId>
+                <version>${javafx.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
