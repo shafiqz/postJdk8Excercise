@@ -1,6 +1,7 @@
 package com.saz.sorter.bubble;
 
 import com.saz.sorter.api.Sorter;
+import com.saz.sorter.insertion.InsertionSorter;
 
 import java.util.concurrent.ThreadLocalRandom;
 
