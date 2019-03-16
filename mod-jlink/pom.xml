@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+		<groupId>com.saz</groupId>
+		<artifactId>jfx-sorter</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>jfx-sorter-mod-jlink</artifactId>
+	<version>${project.parent.version}</version>
+    <packaging>pom</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.saz</groupId>
+			<artifactId>jfx-sorter-api</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.saz</groupId>
+			<artifactId>jfx-sorter-gui</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.saz</groupId>
+			<artifactId>jfx-sorter-bubble</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.saz</groupId>
+			<artifactId>jfx-sorter-heap</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.saz</groupId>
+			<artifactId>jfx-sorter-insertion</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.saz</groupId>
+			<artifactId>jfx-sorter-quick</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.saz</groupId>
+			<artifactId>jfx-sorter-selection</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<includeScope>compile</includeScope>
+							<excludeTransitive>false</excludeTransitive>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>${java.home}${file.separator}bin${file.separator}jlink</executable>
+                    <workingDirectory>${project.build.directory}</workingDirectory>
+                    <commandlineArgs>
+                        --verbose --bind-services --module-path ${java.home}${file.separator}jmods${path.separator}${project.build.directory}${file.separator}dependency --add-modules jfx.sorter.api,jfx.sorter.bubble,jfx.sorter.heap,jfx.sorter.insertion,jfx.sorter.gui --output=jlinked --launcher launch=jfx.sorter.gui/com.saz.sorter.gui.MainApp
+                    </commandlineArgs>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
+</project>
