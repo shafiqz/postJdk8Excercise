@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class QuickSorterTest {
 
     private ThreadLocalRandom random = ThreadLocalRandom.current();
-    int arraySize = 100;
+    int arraySize = 10000;
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
@@ -28,7 +28,7 @@ class QuickSorterTest {
 
         for (int i = 1; i <= sorted.length - 1; ++i) {
             assertTrue(sorted[i - 1] <= sorted[i],
-                       "Element " + sorted[i - 1] + " is not less than " + sorted[i]);
+                       "Element " + sorted[i - 1] + " is not less than " + sorted[i] + ", index: " + i);
         }
     }
 }

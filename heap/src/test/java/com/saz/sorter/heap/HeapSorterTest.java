@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class HeapSorterTest {
 
     private ThreadLocalRandom random = ThreadLocalRandom.current();
-    int arraySize = 100;
+    int arraySize = 10000;
 
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
