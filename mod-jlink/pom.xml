@@ -11,7 +11,7 @@
 	</parent>
 	
 	<artifactId>jfx-sorter-mod-jlink</artifactId>
-	<version>${project.parent.version}</version>
+	<version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
 	<dependencies>
